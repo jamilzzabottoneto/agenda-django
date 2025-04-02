@@ -12,3 +12,8 @@ class ContactAdmin(admin.ModelAdmin):
     list_max_show_all = 50
     list_editable = 'phone', 'email', 
     list_display_links = 'first_name', 'last_name', 
+
+@admin.register(models.Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = 'name',
+    ordering = 'id',
